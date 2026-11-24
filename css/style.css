@@ -347,3 +347,54 @@ img.avatar { object-fit: cover; }
 .lightbox button { position: absolute; top: 16px; right: 20px; width: 44px; height: 44px; font-size: 28px; color: #fff; background: none; border: 0; cursor: pointer; }
 @media (max-width: 600px) { .story-head { flex-direction: column; align-items: flex-start; } }
 .person .avatar.sm { flex: none; } img.avatar.sm { border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+
+/* APPROACH */
+.approach { margin-top: 80px; }
+.ap-intro { max-width: 820px; margin-bottom: 32px; }
+.ap-intro h3 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.3; margin-bottom: 12px; }
+.ap-intro p:last-child { color: #b9c4d6; font-size: 16.5px; }
+.ap-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; counter-reset: s; }
+.ap-step { border-radius: var(--radius); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); overflow: hidden; display: flex; flex-direction: column; }
+.ap-fig { background: #fff; padding: 10px; }
+.ap-fig img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; display: block; cursor: zoom-in; }
+.ap-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.ap-no { font-family: var(--display); font-weight: 700; color: var(--accent); font-size: 14px; }
+.ap-body h4 { font-size: 19px; margin: 4px 0 2px; }
+.ap-body .en { font-family: var(--display); font-size: 12.5px; color: #7f8ba3; margin-bottom: 12px; }
+.ap-body ul { list-style: none; display: grid; gap: 6px; color: #cfd8e6; font-size: 14.5px; margin-bottom: 14px; }
+.ap-body li::before { content: "—"; color: var(--accent); margin-right: 8px; }
+.ap-out { margin-top: auto; font-size: 13px; color: #f3d9a8; border-top: 1px solid rgba(255,255,255,.08); padding-top: 12px; }
+.ap-mech { margin-top: 56px; }
+.ap-mech h4 { font-size: 22px; margin-bottom: 20px; }
+.ap-mech-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr); gap: 32px; align-items: center; }
+.ap-ring { position: relative; aspect-ratio: 1; max-width: 440px; width: 100%; margin: 0 auto; }
+.ap-ring::before { content: ""; position: absolute; inset: 10%; border-radius: 50%; border: 1px dashed rgba(25,211,197,.35); }
+.ap-core { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 34%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center; font-family: var(--display); font-weight: 700; font-size: clamp(13px, 1.4vw, 17px); color: var(--ink); background: radial-gradient(circle at 35% 30%, #7ff0e6, var(--accent)); box-shadow: 0 0 40px rgba(25,211,197,.45); }
+.ap-ring span { position: absolute; transform: translate(-50%, -50%); font-size: 12px; font-weight: 500; padding: 5px 10px; border-radius: 999px; background: #16233d; border: 1px solid rgba(255,255,255,.14); white-space: nowrap; color: #e8edf5; }
+.ap-table { border-color: rgba(255,255,255,.1); }
+.ap-table table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+.ap-table th { text-align: left; padding: 10px 12px; font-size: 12px; color: #7f8ba3; font-weight: 500; background: rgba(255,255,255,.04); }
+.ap-table td { padding: 10px 12px; border-top: 1px solid rgba(255,255,255,.07); color: #cfd8e6; vertical-align: top; }
+.ap-table td:first-child { color: #fff; font-weight: 500; }
+.ap-table td b { color: var(--accent); }
+.ap-road { margin-top: 56px; display: flex; align-items: stretch; gap: 12px; }
+.ap-r { flex: 1; padding: 20px 22px; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); }
+.ap-r.on { border-color: var(--accent); background: rgba(25,211,197,.08); }
+.ap-r small { display: block; font-size: 12px; color: #7f8ba3; letter-spacing: .06em; }
+.ap-r b { display: block; font-family: var(--display); font-size: 22px; color: #fff; margin: 4px 0 6px; }
+.ap-r.on b { color: var(--accent); }
+.ap-r p { font-size: 14px; color: #b9c4d6; }
+.ap-arrow { align-self: center; font-style: normal; color: var(--accent); font-size: 22px; }
+@media (max-width: 980px) {
+  .ap-steps { grid-template-columns: 1fr; }
+  .ap-step { flex-direction: row; }
+  .ap-fig { width: 40%; flex: none; }
+  .ap-mech-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .ap-step { flex-direction: column; }
+  .ap-fig { width: auto; }
+  .ap-road { flex-direction: column; }
+  .ap-arrow { transform: rotate(90deg); }
+  .ap-ring span { font-size: 10.5px; padding: 3px 7px; }
+}

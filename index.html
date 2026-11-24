@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=202611240806" />
+  <link rel="stylesheet" href="css/style.css?v=202611240816" />
 </head>
 <body>
   <header class="nav" id="nav">
@@ -72,6 +72,23 @@
         <p class="vision-statement" data-bind="vision.statement"></p>
       </div>
       <div class="research-grid" id="researchGrid"></div>
+
+      <div class="approach" id="approach">
+        <div class="ap-intro reveal">
+          <p class="kicker" id="apTitle"></p>
+          <h3 id="apHeadline"></h3>
+          <p id="apLead"></p>
+        </div>
+        <div class="ap-steps" id="apSteps"></div>
+        <div class="ap-mech reveal">
+          <h4 id="apMechTitle"></h4>
+          <div class="ap-mech-grid">
+            <div class="ap-ring" id="apRing"></div>
+            <div class="table-wrap ap-table"><table><thead><tr><th>Target</th><th>Conditions</th><th>MOA</th><th>Core target</th></tr></thead><tbody id="apTargets"></tbody></table></div>
+          </div>
+        </div>
+        <div class="ap-road reveal" id="apRoad"></div>
+      </div>
 
       <div class="pipeline reveal" id="pipeline">
         <div class="pipeline-head">
@@ -173,8 +190,8 @@
     </div>
   </footer>
 
-  <script src="data/content.js?v=202611240806"></script>
-  <script src="js/hero.js?v=202611240806"></script>
-  <script src="js/main.js?v=202611240806"></script>
+  <script src="data/content.js?v=202611240816"></script>
+  <script src="js/hero.js?v=202611240816"></script>
+  <script src="js/main.js?v=202611240816"></script>
 </body>
 </html>

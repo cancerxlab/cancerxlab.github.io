@@ -71,6 +71,38 @@ window.LAB_DATA = {
     },
   ],
 
+  /* 연구 접근법: 박사님 제공 "랩소개.pptx" 기준 */
+  approach: {
+    title: "Our Approach",
+    headline: "항암 치료 실패의 핵심, 종양 내성을 이해하는 데서 출발합니다",
+    lead: "방사선·항암 치료 후 재발과 악성화의 주된 원인은 종양 내성입니다. 내성 기전을 이해해야 치료에 성공할 수 있다는 관점에서, 내성 핵심 표적을 찾고 그 표적을 겨냥하는 치료제를 개발합니다.",
+    steps: [
+      { no: "01", title: "내성 관련 유전자 발굴", en: "ID for tumor-resistance-associated genes", img: "images/research/approach-1.jpg",
+        points: ["방사선내성 세포주와 방사선 저항성 환자 샘플 확보", "Omics 분석과 공개 DB 생물정보 분석", "핵심 표적 MASTL · TNKS · RIP1 도출"], output: "Cancer Research (2014) 등 관련 SCI 20편" },
+      { no: "02", title: "세포·임상 연관성 검증", en: "In vitro and in vivo (clinical association) study", img: "images/research/approach-2.jpg",
+        points: ["세포·동물 모델에서 표적 억제 시 방사선 감수성 확인", "폐·위·대장·자궁경부암 조직에서 표적 발현 분석"], output: "Biochem Pharmacol (2017) 등 관련 SCI 12건" },
+      { no: "03", title: "작용기전 연구와 저해제 검증", en: "Mode-of-action study", img: "images/research/approach-3.jpg",
+        points: ["표적 발굴: 임상 조직·세포주 분석", "표적 검증: 유전체 분석·동물실험", "저해제 효과 검증: in vitro · in vivo"], output: "IJMS (2020) 등 관련 논문 15건" },
+    ],
+    mechanismsTitle: "종양 내성에는 여러 기전이 함께 작용합니다",
+    mechanisms: ["Tumor heterogeneity", "Immune escape", "Cell cycle regulation", "DNA damage response", "Cancer stemness", "Escape apoptosis", "Tumor metabolism", "Hypoxia", "Inflammation"],
+    targets: [
+      { target: "YAP–TEAD pathway", condition: "Trans sodium crocetinate", moa: "HIPPO pathway / YAP-TEAD", core: "YAP, TEAD" },
+      { target: "PP2A–CIP2A axis", condition: "Breast cancer", moa: "Cell cycle, DNA damage", core: "CIP2A" },
+      { target: "WNT–TNKS axis", condition: "Colon cancer", moa: "Wnt – APC – β-catenin", core: "TNKS1/2" },
+      { target: "Cell cycle – mitosis", condition: "Solid tumor, TNBC", moa: "Cell cycle, DNA damage", core: "MASTL, PLK" },
+      { target: "Tumor microenvironment · immune cells", condition: "Malignant tumors", moa: "Immunosuppressive immune cells", core: "PI3K isoform, ICP" },
+      { target: "Anti-apoptosis", condition: "Solid tumor", moa: "Cell cycle, DNA damage", core: "PCW" },
+      { target: "Hypoxia – tumor metabolism", condition: "Malignant tumors, renal cancer", moa: "Oxygenation, pVHL-HIF2A/ARNT-VEGF", core: "HIF1A/2A" },
+      { target: "DNA damage response", condition: "Several solid tumors", moa: "ROS, DNA damage", core: "CIP2A, ATR" },
+    ],
+    roadmap: [
+      { tag: "Prior Research (~2019)", trl: "TRL 1–4", text: "종양 내성 핵심 표적 발굴과 특성 규명, 표적 검증(Proof of target)과 유효물질 스크리닝" },
+      { tag: "Current Research", trl: "TRL 4–6", text: "AI를 활용한 항암 표적 선도물질·최적 후보물질 확보 및 MOA 검증. AI 기업, 한국화학연구원과 산·학·연 연계", current: true },
+      { tag: "Next", trl: "임상 I–II", text: "기술이전 및 기술창업으로 임상 단계까지 연결" },
+    ],
+  },
+
   /* 파이프라인: 박사님 제공 "파이프라인.pptx" (Current Research) 기준.
    * stage 는 7단계 중 진행 위치(1~7, 소수 가능). 화살표 길이를 단계로 옮긴 값이라 필요하면 조정하세요. */
   pipeline: {

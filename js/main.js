@@ -37,6 +37,32 @@
       <p>${esc(r.desc)}</p>
     </article>`).join("");
 
+  // APPROACH
+  const A = D.approach;
+  if (!A) { $("#approach").style.display = "none"; } else {
+    $("#apTitle").textContent = A.title; $("#apHeadline").textContent = A.headline; $("#apLead").textContent = A.lead;
+    $("#apSteps").innerHTML = A.steps.map((st, i) => `
+      <article class="ap-step reveal" style="transition-delay:${i * 100}ms">
+        <div class="ap-fig"><img src="${esc(st.img)}" alt="${esc(st.title)}" loading="lazy" /></div>
+        <div class="ap-body">
+          <span class="ap-no">${esc(st.no)}</span>
+          <h4>${esc(st.title)}</h4><div class="en">${esc(st.en)}</div>
+          <ul>${st.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+          <p class="ap-out">${esc(st.output)}</p>
+        </div>
+      </article>`).join("");
+    $("#apMechTitle").textContent = A.mechanismsTitle;
+    const n = A.mechanisms.length;
+    $("#apRing").innerHTML = `<div class="ap-core">Tumor<br>Resistance</div>` + A.mechanisms.map((m, i) => {
+      const ang = (i / n) * 2 * Math.PI - Math.PI / 2;
+      return `<span style="left:${50 + 40 * Math.cos(ang)}%;top:${50 + 40 * Math.sin(ang)}%">${esc(m)}</span>`;
+    }).join("");
+    $("#apTargets").innerHTML = A.targets.map((t) => `<tr><td>${esc(t.target)}</td><td>${esc(t.condition)}</td><td>${esc(t.moa)}</td><td><b>${esc(t.core)}</b></td></tr>`).join("");
+    $("#apRoad").innerHTML = A.roadmap.map((r) => `
+      <div class="ap-r${r.current ? " on" : ""}"><small>${esc(r.tag)}</small><b>${esc(r.trl)}</b><p>${esc(r.text)}</p></div>`).join('<i class="ap-arrow">→</i>');
+    $("#apSteps").addEventListener("click", (e) => { const im = e.target.closest(".ap-fig img"); if (!im) return; const lb = $("#lightbox"); lb.querySelector("img").src = im.src; lb.hidden = false; });
+  }
+
   // PIPELINE (신약회사 홈페이지 형식)
   const P = D.pipeline;
   const MOD = P.modalities || {};
