@@ -163,6 +163,23 @@
         <a class="more-link" href="#publications">전체 논문 보기 →</a></div>
     </div>`;
 
+  // RESEARCH FUNDS
+  if (D.funds && D.funds.groups) {
+    $("#fundsTitle").textContent = D.funds.title || "Research Funds";
+    $("#fundGroups").innerHTML = D.funds.groups.map((g) => `
+      <div class="fund-group reveal">
+        <h3 class="t-head">${esc(g.name)}</h3>
+        <ul class="fund-list">${g.items.map((f) => `
+          <li class="fund${f.period ? "" : " fund-np"}">
+            ${f.period ? `<span class="fund-yr">${esc(f.period)}</span>` : ""}
+            <div>${f.sponsor ? `<span class="fund-sp">${esc(f.sponsor)}</span>` : ""}<p>${esc(f.title)}</p></div>
+          </li>`).join("")}</ul>
+        ${g.note ? `<p class="fund-note">${esc(g.note)}</p>` : ""}
+      </div>`).join("");
+  } else {
+    document.querySelector("#funds").style.display = "none";
+  }
+
   // PUBLICATIONS
   const pubs = D.publications.items;
   $("#pubNote").textContent = D.publications.note || "";

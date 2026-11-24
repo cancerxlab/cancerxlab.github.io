@@ -240,6 +240,31 @@ window.LAB_DATA = {
     ],
   },
 
+  /* 주요 연구비 (2026-11-24 사용자 제공 목록 그대로) */
+  funds: {
+    title: "Research Projects & Grants",
+    groups: [
+      { name: "Government-Funded Research", items: [
+        { period: "2025–", sponsor: "KDDF", title: "암-섬유화 동시억제 NUAK1표적 First-in-Class 선도물질 개발" },
+        { period: "2022–", sponsor: "KDDF", title: "MASTL표적 삼중음성유방암 혁신형 신약 선도물질 개발" },
+        { period: "2020–2024", sponsor: "NRF · 중견연구자지원사업", title: "Centrosome clustering–cGAS–STING 제어를 통한 면역치료 불응성 암에 대한 신규 항암면역치료 전략연구" },
+        { period: "2020–2023", sponsor: "MSIT · 첨단방사선융합사업", title: "딥러닝-딥오믹스기반 신규 방사선 저항성제어 표적치료제 개발" },
+        { period: "2019–2020", sponsor: "MSIT · 바이오기술개발사업", title: "딥러닝기반 MASTL저해제 최적화를 통한 삼중음성유방암 신규표적항암제 개발" },
+        { period: "2017–2019", sponsor: "MOHW · 암정복추진연구개발사업", title: "MASTL-PP2A표적 구조기반 신규 항암치료제개발 및 난치성암 치료전략" },
+        { period: "2014–2017", sponsor: "KHIDI · 보건의료기술연구개발사업", title: "CIP2A를 표적으로 하는 항암 표적치료 후보물질개발 및 이를 활용한 다중표적치료 전략연구" },
+      ]},
+      { name: "Industry-Sponsored Research", items: [
+        { period: "2020–2021", sponsor: "보령제약 (Boryung)", title: "신규 표적항암제 개발" },
+        { period: "2020–2021", sponsor: "에스티팜 (ST Pharm)", title: "항암 후보물질의 효능평가 및 기전연구" },
+        { period: "2019–2020", sponsor: "보령제약 (Boryung)", title: "신규 저해제와 국소 방사선 병용치료에 의한 전신 항암효과(Abscopal effect) 및 면역학적 분석 연구" },
+      ]},
+      { name: "Institutional Research Programs", note: "Supported by the Ministry of Science and ICT (MSIT)", items: [
+        { title: "방사선반응제어 의생명연구" },
+        { title: "방사선반응제어실용화기술개발" },
+      ]},
+    ],
+  },
+
   /* NTIS 수행과제. 아래는 모두 형식 예시입니다. NTIS 과제 목록을 받으면 교체 */
   projects: {
     verified: false,
