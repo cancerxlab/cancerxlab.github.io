@@ -175,7 +175,7 @@ window.LAB_DATA = {
       { name: "김근영", role: "박사후연구원", group: "Postdoctoral Researcher", photo: "images/members/kim-gy.jpg?v=2" },
       { name: "김윤아", role: "박사후연구원", group: "Postdoctoral Researcher", photo: "images/members/kim-ya.jpg?v=4" },
       { name: "최예림", role: "박사후연구원", group: "Postdoctoral Researcher", photo: "images/members/choi-yr.jpg?v=1" },
-      { name: "김찬율", role: "박사과정", group: "Ph.D. Candidate", photo: "" },
+      { name: "김찬율", role: "박사과정", group: "Ph.D. Candidate", photo: "images/members/kim-cy.jpg?v=1" },
     ],
     /* 예: { name: "홍길동", now: "현재 소속" } */
     alumni: [],
